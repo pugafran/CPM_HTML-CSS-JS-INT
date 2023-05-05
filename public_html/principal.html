@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    
+        
+        <link rel = "stylesheet" href = "estilos.css" type = "text/css" media = "all">
+        
+        <style type = "text/css">
+			p.IMPORTANTE{font-family: Arial;} /*ReqS2*/
+			h1.IMPORTANTE{font-family: sans-serif;} /*ReqS2*/
+			#FORMATOH1{font-size: 14pt;} /*ReqS4*/
+			strong{text-decoration: underline;}/*ReqS9*/
+			body {background-image: url(fondo.png)} /*ReqS15*/
+			.listas{list-style-position: inside;} /*ReqS18*/
+			#1{position: relative;} /*ReqS21*/
+			#2{position: relative;} /*ReqS21*/
+			#3{position: relative;} /*ReqS21*/
+			figure { display: block; visibility: visible;} /*ReqS22*/
+	</style>
+        
+        <script src="codigo.js"></script>
+        <script>
+            function copia(idTfTexto, idTexto){ /*ReqF18*/
+                
+                var tfTexto=document.getElementById(idTfTexto);
+                var texto=document.getElementById(idTexto);
+                
+                texto.innerHTML=tfTexto.value;
+                
+                texto.style.color='purple';
+                
+            }
+            
+            /*ReqF19*/
+            function NumTelCorrecto(NumTel){
+                var l=NumTel.length;
+                if(l!==9) return false;
+                return true;
+            }
+            
+            function checkNumTel(DNumTel,NumTel){ /*ReqF19*/
+                var oNumTel=document.getElementById(NumTel);
+                var oDNumTel=document.getElementById(DNumTel);
+                
+                if(NumTelCorrecto(oNumTel.value)){
+                    oDNumTel.style.color='black';
+                    oNumTel.style.color='black';
+                }
+                else{
+                    oDNumTel.style.color='red'; 
+                    oNumTel.style.color='red';
+                    alert("Tiene que tener 9 dígitos"); /*ReqF20*/
+                }
+            }
+            
+            function conFoco(id) {/*ReqF22*/
+                document.getElementById(id).style.border="5px solid purple";
+            }
+
+            function sinFoco(id) {/*ReqF22*/
+                document.getElementById(id).style.border="5px solid blue";
+            }
+            
+        </script>
+
+        
+        <!-- ReqH1 -->
+        <title>Energy Web Foundation</title>
+        
+        <!-- ReqH2 -->
+        <meta charset="UTF-8">
+        
+        <!-- ReqH3 -->
+        <meta name="description" content="Página de información sobre la Energy Web Foundation">
+	<meta name="keywords" content="ewf, energy web foundation, energy web">
+	<meta name="author" content="UO272109 - Francisco Gabriel Puga Lojo">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <body>
+        
+        <!--ReqH4-->
+	<h1 id = "TITULO" class = "IMPORTANTE">Energy Web Foundation</h1>     
+        
+        
+      
+	<!--ReqH6-->
+	<article>
+
+	<h3>Historia de la Energy Web Foundation</h3>
+        
+        <!--ReqH16-->
+        <figure>
+            <center>
+                <img src="logo.jpg" alt="Logo EWF" style="width:1024px;height:540px;">
+            </center>
+	</figure>
+	
+	
+	<p id = "PrimeraLinea">Energy Web se lanzó a principios de 2017. Fue cofundada por el grupo de expertos en energía mundialmente respetado Rocky Mountain Institute (RMI)<sup>1</sup> y el destacado desarrollador 
+        de blockchain Grid Singularity (GSy)<sup>2</sup>, junto con una cohorte de 10 afiliados fundadores. RMI y GSy, que hoy en día contribuyen con miembros a nuestra junta directiva 
+        (es decir, Foundation Council), vieron la promesa de blockchain en el sector energético. Energy Web nació para hacer realidad esa promesa.</p>
+        
+        <figure>
+            <center>
+                <img src="https://miro.medium.com/max/1400/0*vDa1WkTX8YeM0xqZ.jpeg" alt="EWF_Resumen">
+            </center>
+        </figure>
+        
+        <!--ReqH8-->
+        <p><i>"Las Empresas de Energía unen fuerzas con RMI Rocky Mountain Institute y Grid Singularity para lanzar la iniciativa global Blockchain para la Energía!
+        Basalt, Colorado/Viena, Austria (8 de Mayo de 2017) - Centrica plc, Elia, Engie, Royal Dutch Shell, Sempra Energy, SP Group, Statoil ASA, Stedin, TWL (Technical Works Ludwigshafen AG) y Tokyo Electric Power Co (Tepco) han unido fuerzas para apoyar a la Energy Web Foundation (EWF), una organización sin fines de lucro cuya misión es acelerar el despliegue comercial de la tecnología blockchain en el sector energético. Gracias a su apoyo, EWF se ha asegurado la primera ronda de financiación por valor de 2,5 millones de dólares.
+        EWF es una asociación entre Rocky Mountain Institute, una organización independiente sin fines de lucro con sede en los USA centrada en impulsar el uso eficiente y restaurativo de los recursos, y Grid Singularity, un desarrollador de tecnología blockchain que se especializa en aplicaciones del sector energético.<br><br>
+        La tecnología Blockchain reduce los costos de transacción al mantener una única copia lógica de los registros de transacciones, lo que evita la necesidad de conciliación y liquidación. Debido a sus atributos únicos, la tecnología blockchain tiene el potencial de desempeñar un papel significativo y potencialmente revolucionario en el sector energético. En el lado incremental, la tecnología blockchain se puede utilizar para reducir el costo de las facturas de servicios públicos o la necesidad de capital de trabajo en las transacciones de gas o electricidad del mercado mayorista. En el lado del cambio de juego, la tecnología blockchain puede permitir que millones de dispositivos de energía (sistemas HVAC, calentadores de agua, vehículos eléctricos, baterías, instalaciones solares fotovoltaicas) realicen transacciones entre sí en el borde de la distribución mientras brindan apoyo a las empresas de servicios públicos y a los operadores de la red para integrarse. más capacidad de energía renovable variable a escala de servicios públicos a un costo mucho menor.
+        “El principal desafío del sector eléctrico en el siglo XXI es integrar más energía renovable en la red de manera rentable en un contexto de demanda en gran medida plana o decreciente. La única forma en que sabemos cómo hacer esto es automatizando el lado de la demanda, permitiendo que muchos más participantes en la red. Eso significa automatización en el borde de la distribución e integración de esta automatización con los mercados mayoristas”, dijo Hervé Touati, director gerente de RMI y presidente de EWF. “Estamos entusiasmados con el potencial de la tecnología blockchain como facilitador para hacer realidad esa visión. Blockchain no será el único bloque de construcción de la red del siglo XXI, pero lo más probable es que sea un bloque de construcción clave. También proporciona niveles mucho más altos de ciberseguridad esencialmente de forma gratuita, lo que aborda, como subproducto, una de las preocupaciones clave de los ejecutivos de servicios públicos cuando se trata de recursos energéticos distribuidos”.
+        Como cofundador de EWF, Grid Singularity está liderando el desarrollo de una infraestructura de blockchain específica de energía que será mantenida por EWF y sus afiliados de apoyo. Grid Singularity, junto con su socio Parity Technologies, traerá la tecnología blockchain más avanzada, abordando las limitaciones en términos de velocidad y costos de transacción de las blockchains actualmente disponibles, y habilitando características que se enfocan en soportar aplicaciones específicas de energía.<br><br>
+        La test-network ‘Kovan’, que es una proof-of-concept para el nuevo algoritmo de consenso, tiene la capacidad de realizar hasta 1000 transacciones por segundo (tps), y ya es utilizada por muchas empresas emergentes de blockchain. Al incorporar más tecnología de canales estatales, pretendemos que nuestra arquitectura facilite el escalado a 1 millón de tps durante los próximos años”, dijo Ewald Hesse, director ejecutivo de Grid Singularity y vicepresidente de EWF. “Con el diseño de ‘Polkadot’ concebido por Parity Technologies, también estamos introduciendo el concepto de interoperabilidad entre múltiples arquitecturas blockchain, lo que debería liberar a los usuarios del bloqueo tecnológico”.<br><br>
+        Paralelamente al desarrollo de una infraestructura de IT de código abierto, EWF también trabajará en el análisis de casos de uso y la organización de grupos de trabajo para impulsar los casos de uso más prometedores en pruebas de conceptos y aplicaciones comerciales, al tiempo que incubará un ecosistema de desarrolladores de aplicaciones y cooperará. con reguladores y organismos de normalización para facilitar el despliegue. EWF está solicitando activamente la colaboración con otros proveedores de tecnología ansiosos por respaldar el enfoque de código abierto para eliminar las barreras de entrada al mercado de la energía."
+        </i>
+        <br><br>Todd Zeranski - Marketing Manager RMI</p>
+	
+	
+	<p>Ejemplo de código que puede ser ejecutado en Energy Web</p>
+        
+        <!--ReqH10-->
+        <section>
+        <code>
+            
+            <pre>
+                
+                pragma solidity >=0.7.0 <0.9.0;
+
+                contract MultiSend {
+
+                    // to save the owner of the contract in construction
+                    address private owner;
+
+                    // to save the amount of ethers in the smart-contract
+                    uint total_value;
+
+
+                    // event for EVM logging
+                    event OwnerSet(address indexed oldOwner, address indexed newOwner);
+
+
+                    // modifier to check if the caller is owner
+                    modifier isOwner() {
+                        // If the first argument of 'require' evaluates to 'false', execution terminates and all
+                        // changes to the state and to Ether balances are reverted.
+                        // This used to consume all gas in old EVM versions, but not anymore.
+                        // It is often a good idea to use 'require' to check if functions are called correctly.
+                        // As a second argument, you can also provide an explanation about what went wrong.
+                        require(msg.sender == owner, "Caller is not owner");
+                        _;
+                    }
+
+                    /**
+                     * @dev Set contract deployer as owner
+                     */
+                    constructor() payable{
+                        owner = msg.sender; // 'msg.sender' is sender of current call, contract deployer for a constructor
+                        emit OwnerSet(address(0), owner);
+
+                        total_value = msg.value;  // msg.value is the ethers of the transaction
+                    }
+
+                    // the owner of the smart-contract can chage its owner to whoever 
+                    // he/she wants
+                    function changeOwner(address newOwner) public isOwner {
+                        emit OwnerSet(owner, newOwner);
+                        owner = newOwner; 
+                    }
+
+                    /**
+                     * @dev Return owner address 
+                     * @return address of owner
+                     */
+                    function getOwner() external view returns (address) {
+                        return owner;
+                    }
+
+                    // charge enable the owner to store ether in the smart-contract
+                    function charge() payable public isOwner {
+                        // adding the message value to the smart contract
+                        total_value += msg.value;
+                    }
+
+                    // sum adds the different elements of the array and return its sum
+                    function sum(uint[] memory amounts) private returns (uint retVal) {
+                        // the value of message should be exact of total amounts
+                        uint totalAmnt = 0;
+
+                        for (uint i=0; i < amounts.length; i++) {
+                            totalAmnt += amounts[i];
+                        }
+
+                        return totalAmnt;
+                    }
+
+                    // withdraw perform the transfering of ethers
+                    function withdraw(address payable receiverAddr, uint receiverAmnt) private {
+                        receiverAddr.transfer(receiverAmnt);
+                    }
+
+                    // withdrawls enable to multiple withdraws to different accounts
+                    // at one call, and decrease the network fee
+                    function withdrawls(address payable[] memory addrs, uint[] memory amnts) payable public isOwner {
+
+                        // first of all, add the value of the transaction to the total_value 
+                        // of the smart-contract
+                        total_value += msg.value;
+
+                        // the addresses and amounts should be same in length
+                        require(addrs.length == amnts.length, "The length of two array should be the same");
+
+                        // the value of the message in addition to sotred value should be more than total amounts
+                        uint totalAmnt = sum(amnts);
+
+                        require(total_value >= totalAmnt, "The value is not sufficient or exceed");
+
+
+                        for (uint i=0; i < addrs.length; i++) {
+                            // first subtract the transferring amount from the total_value
+                            // of the smart-contract then send it to the receiver
+                            total_value -= amnts[i];
+
+                            // send the specified amount to the recipient
+                            withdraw(addrs[i], amnts[i]);
+                        }
+                    }
+
+                }
+
+            </pre>
+            
+            
+        </code>
+	
+	<!--ReqH7--> <!--ReqH9--> <!--ReqH11-->
+	<p><dfn><a href="https://rmi.org/">Rocky Mountain Institute (RMI)<sup>1</sup></a>: Rocky Mountain Institute es una organización independiente sin fines de lucro fundada en 1982, transforma el uso global de energía para crear un futuro limpio, próspero y seguro
+        con bajas emisiones de carbono. <STRONG>Involucra a empresas, comunidades, instituciones y empresarios para acelerar la adopción de soluciones basadas en el mercado que cambien de manera 
+        rentable de los combustibles fósiles a la eficiencia y las energías renovables.</STRONG> RMI tiene oficinas en Basalt y Boulder, Colorado, Nueva York, Washington DC y Pekín.</dfn></p>
+        
+        <!--ReqH7--> <!--ReqH9--> <!--ReqH11-->
+        <p><dfn><a href="https://gridsingularity.com/">Grid Singularity (GSy)<sup>2</sup></a>: Grid Singularity <STRONG>es un desarrollador de tecnología blockchain líder en el mundo en el sector energético.</STRONG> Los fundadores y el personal clave incluyen desarrolladores centrales de blockchain 
+        de Ethereum, ejecutivos de energía experimentados, reguladores de energía y empresarios de tecnología. Grid Singularity fue un Tech Pioneer del World Economic Forum de 2018.</dfn></p>
+	
+        
+        <p> Otros enlaces de interés:</p>
+        
+        <!-- ReqH12 -->
+        <a href="https://www.youtube.com/watch?v=FjKIN9oUt2I&pp=ugMICgJlcxABGAE%3D" target="_blank">Introducción a Energy Web Foundation</a> 
+       
+        
+        
+        
+        <!-- ReqH18 -->
+        
+        
+        <br>
+        
+        <!-- ReqH13 -->
+        <a href="../pagina_web.png" target="_blank">Foto de como es la página de Energy Web</a> 
+        
+       
+       
+        <p><u>Esquema</u></p>
+         <!-- ReqH21 -->
+        <ol> 
+            <li>Energy Web Foundation está co-fundado por:
+                <!-- ReqH22 -->
+                <ul> 
+                    <li>Rocky Mountain</li>
+                    <li>Grid Singularity</li>
+                </ul>
+            </li>
+        </ol>
+            
+        <!-- ReqH23 --> 
+            <table title="Horario" border='' class="">
+                <caption>(Horario orientativo sujeto a cambios)</caption>
+                <thead><tr><td colspan="7">Horario de streaming de vídeos sobre Energy Web:</td></tr></thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="1" colspan="2">Día</td>
+                        <td colspan="1">Lunes</td>
+                        <td colspan="1">Martes</td> 
+                        <td colspan="1">Miércoles</td>
+                        <td colspan="1">Jueves</td>
+                        <td colspan="1">Viernes</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Horas</td>
+                        <td rowspan="1">Mañana</td>
+                        <td>11:00 a 14:00</td>
+                        <td>11:00 a 14:00</td>
+                        <td>11:00 a 14:00</td>
+                        <td>11:00 a 14:00</td>
+                        <td>11:00 a 13:00</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">Tarde</td>
+                        <td>15:00 a 20:30</td>
+                        <td>15:00 a 20:30</td>
+                        <td>15:00 a 20:30</td>
+                        <td>15:00 a 20:00</td>
+                        <td>15:00 a 19:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+	</article>
+        
+        <!-- ReqH19 -->
+        <section>
+        
+        <br>
+        
+           <fieldset>
+            <legend>Vídeo que muestra el potencial de Energy Web</legend>
+        <!-- ReqH17 -->
+        <video width="500" height="400" controls muted>
+                <source src="video.mp4" type="video/mp4">
+        </video>
+        
+        <!-- ReqH18 -->
+        <p> En caso de que no cargue siempre puede verlo
+                <a href="https://www.youtube.com/watch?v=fdXqhNjQQdM" target="_blank">
+                    pinchando aquí</a>
+        </p>
+        </fieldset>
+	
+        </section>
+        
+        <!--  ReqF1 --> <!--  ReqF2 --> <!--  ReqF3 --> <!--  ReqF4 --> <!--  ReqF5 -->
+        <form name="FormularioEW"
+              action="mailto:info@energyweb.org" 
+              method="post"
+              enctype="text/plain" target="_blank" 
+              autocomplete="off" novalidate>  
+            
+            <fieldset> <!--  ReqF6 -->
+                <legend id="Formulario"> Formulario para crear convención de Energy Web </legend>
+                 <div> 
+                     Nombre de usuario: <input id="idNomUsur" type="text" name="Nombre" 
+                        placeholder="Nombre de usuario"
+                        onfocus="conFoco('idNomUsur')" onblur="sinFoco('idNomUsur')" 
+                        onkeyup="convertirAMayusculas(this)" oninput="escribe('idNomUsur','SNU')"
+                        > <!--  ReqF22 --> <!--  ReqF23 --> <span id="SNU"></span>
+                 </div> <!--  ReqF7 -->
+                 <br>
+                 <div>
+                     Contraseña: <input  id="idContra" type="password" 
+                            name="Contraseña" 
+                            onfocus="conFoco('idContra')" onblur="sinFoco('idContra')" 
+                            oninput="escribe('idContra', 'SContra')"> <span id="SContra"></span> 
+                     <!--  ReqF8 --> <!--  ReqF22 -->
+                 </div>
+                 <br>
+                 <div id="DNumTel"><!--  ReqF19 -->
+                    N&uacute;mero de tel&eacute;fono:<input id="NumTel" type="tel" 
+                        name="telefono" 
+                        pattern="[0-9]{9}"
+                        placeholder="Número de teléfono"
+                        title="Introduzca 9 dígitos"
+                        onchange="checkNumTel('DNumTel','NumTel')"
+                        onfocus="conFoco('NumTel')" onblur="sinFoco('NumTel')" > <!--  ReqF9 -->
+                 </div>
+                 <br>
+                 <div>
+                     WEB:<input id="idWeb" type="url" name="WEB" 
+                                placeholder="Introduzca dirección WEB que se usará para el evento" 
+                                oninput="copia('idWeb', 'web')"> <!--  ReqF10 -->
+                     <span id="web"></span> <!--  ReqF18 -->
+                 </div>
+                 <br>
+                <div><!--  ReqF13 -->
+                    Selecciona un color para el merchandising:
+                    <input name="Color" type="color">
+                </div>
+                 <br>
+                 <div><!--  ReqF15 -->
+                     Introduzca foto de su dni: <input name="foto" type="file">
+                 </div>
+                 <br>
+                 <div> <!--  ReqF16 -->
+                     Introduzca la hora a la que realizará el evento: <input name="hora" type="time"> 
+                 </div>
+                 <br>
+                 <span ondblclick="alerta()"> <!--  ReqF25 -->
+                     Click dos veces aquí.
+                 </span>
+                 <br>
+                 <br>
+                 <div>
+                 Seleccione trabajadores y lugar:
+                 <br>
+                 <br>
+                 Elija el número de trabajadores estimados que habrá:
+                 <br>
+                <select name="Numero"><!--  ReqF14 -->
+                        <optgroup label="Pocos">
+                            <option value="Cero">Ninguno</option>
+                            <option value="Uno">1</option>
+                            <option value="Dos">2</option>
+                            <option value="Tres">3</option>
+                        </optgroup>
+
+                        <optgroup label="Muchos">
+                            <option value="Diez">10</option>
+                            <option value="Once">11</option>
+                            <option value="Doce">12</option>
+                        </optgroup>
+                </select>
+                 <br>
+                 <br>
+                 Lugar del evento:
+                 <br>
+                <select name="Lugar"><!--  ReqF14 -->
+                        <optgroup label="Nacional">
+                            <option value="Madrid">Madrid</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Asturias">Asturias</option>
+                        </optgroup>
+
+                        <optgroup label="Internacional">
+                            <option value="México">México</option>
+                            <option value="París">París</option>
+                            <option value="Japón">Japón</option>
+                        </optgroup>
+                </select>
+                 </div>
+                 <br>
+                 <div>
+                    Texto:
+                        <input id="tfTexto" type="text" name="texto"> 
+                        <br>
+                        <br>
+                    <input type="button" name="copiar" value="Copiar"
+                        onclick="copiarTexto('tfTexto', 'texto');"> <!--  ReqF27 -->
+        
+                    <span id="texto"></span>
+                 </div>
+                 
+            </fieldset>
+            <fieldset>
+                <legend id="Formulario">Datos personales</legend>
+                    <p>Sexo:</p> <!--  ReqF11 -->
+                    <p><input name="Sexo" type="radio" value="M">
+                        Masculino
+                    </p>
+
+                    <p><input name="Sexo" type="radio" value="M">
+                        Femenino
+                    </p>
+                    
+                    <p><input name="Sexo" type="radio" value="O" checked="">
+                        Otro
+                    </p>
+                    <br>
+                    <p>Estudios:</p> <!--  ReqF11 -->
+                    <p><input name="Estudios" type="radio" value="I">
+                        Informático
+                    </p>
+
+                    <p><input name="Estudios" type="radio" value="A">
+                        ADE
+                    </p>
+                    
+                    <p><input name="Estudios" type="radio" value="Psico">
+                        Psicología
+                    </p>
+                    
+                    <p><input name="Estudios" type="radio" value="Derech">
+                        Derecho
+                    </p>
+                    
+                    <p><input name="Sexo" type="radio" value="O" checked="">
+                        Otro
+                    </p>
+                    
+                    <br>
+                    <p>Fecha de nacimiento: 
+                        <input type="date" name="fechanace">
+                    </p>
+            </fieldset>
+            
+            <fieldset><!--  ReqF12 -->
+                <legend id="Formulario">Temas a tratar:</legend>
+                <p>Seleccione los temas a tratar:</p>
+                <input name="Tecnología" type="checkbox"> Tecnología
+                <input name="Tokenomics" type="checkbox"> Tokenomics
+                <input name="Cultura" type="checkbox"> Cultura
+                
+                
+            </fieldset>
+            <br>
+            <!--  ReqF17 -->
+            <input name="Enviar" type="submit"> 
+            <input name="Borrar" type="reset"> 
+        </form>
+        
+        
+        <section>
+        
+        <!-- ReqH15 -->
+	<fieldset>
+            <legend>Otras publicaciones:</legend>
+            <div>
+	
+                    <a href="new_members.html" target="_blank"> Nuevos miembros dentro de Energy Web</a><br>
+                    <a href="FAQ_es_ES.html" target="_blank">FAQ (es-ES)</a><br>
+                    <a href="FAQ_en_US.html" target="_blank">FAQ (en-US)</a>
+            </div>
+        </fieldset>
+                   
+        </section>
+
+        <section>
+        <fieldset>
+            <legend>Datos de contacto:</legend>
+            <!--ReqH20-->
+            <div>
+                
+                <!-- ReqH14 -->
+                <p> Para cualquier duda sobre eventos de Energy Web:
+                <a href="mailto:info@energyweb.org?subject=Dudas%20sobre%20eventos%20de%20Energy%20Web%20Foundation"> Envía un correo haciendo clic aquí </a>
+                </p>
+            
+                <p>Teléfono de Energy Web: 931102021</p>
+            </div><!-- ReqH20 -->
+            
+            <!--ReqH5-->
+        <footer>
+            <p>Página creada por Francisco Gabriel Puga Lojo el <time datetime='2022-04-28'>28 de abril de 2022</time></p>
+        </footer>
+            
+        </fieldset>
+        </section>
+    </body>
+
+</html>

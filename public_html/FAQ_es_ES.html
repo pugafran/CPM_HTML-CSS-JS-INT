@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es-Es">
+    <head>
+        <title>FAQ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+                        <link rel = "stylesheet" href = "estilos.css" type = "text/css" media = "all">
+        
+        <style type = "text/css">
+			p.IMPORTANTE{font-family: Arial;} /*ReqS2*/
+			h1.IMPORTANTE{font-family: sans-serif;} /*ReqS2*/
+			#FORMATOH1{font-size: 14pt;} /*ReqS4*/
+			strong{text-decoration: underline;}/*ReqS9*/
+			body {background-image: url(fondo.png)} /*ReqS15*/
+			.listas{list-style-position: inside;} /*ReqS18*/
+			#1{position: relative;} /*ReqS21*/
+			#2{position: relative;} /*ReqS21*/
+			#3{position: relative;} /*ReqS21*/
+			figure{display_ block; position: static; visibility scroll;} /*ReqS22*/
+	</style>
+        
+        <script>
+            numberFormat = new Intl.NumberFormat('es-ES', {style: 'decimal', 
+                maximumFractionDigits: 4, minimumFractionDigits: 0}); /*ReqI2*/
+            currencyFormat = new Intl.NumberFormat('es-ES', {style: 'currency', 
+                currency: 'EUR'}) /*ReqI3*/
+            dateFormatShort = new Intl.DateTimeFormat('es-ES', {dateStyle: 'short'}); /*ReqI4*/
+            dateFormatLong = new Intl.DateTimeFormat('es-ES', {dateStyle: 'full'}); /*ReqI5*/
+        </script> 
+        <script type="text/Javascript" src="I18n.js"></script>
+        
+    </head>
+    <body>
+        <h1>FAQ</h1>
+        <br>
+        
+        <div lang="es-Es"> <!-- ReqI11 -->
+        <h2>¿Dónde puedo conseguir EWT? ¿En qué bolsas cotiza?</h2>
+        <p>EWT cotiza actualmente en las bolsas mundiales Kraken, KuCoin, Bitmart y Liquid</p>
+        
+        <h2>¿Cómo puedo guardar mi EWT?</h2>
+        <p>Muchos monederos populares permiten interactuar con la Energy Web Chain y almacenar EWT, incluyendo MyCrypto, MetaMask y monederos de hardware como Ledger y Trezor. Hemos desplegado un monedero personalizado basado en la web (basado en el monedero de código abierto MyCrypto), que está preconfigurado para conectarse a nuestra red de prueba Volta y a la Energy Web Chain de producción y ha sido probado con monederos de hardware como Ledger y Trezor.</p>
+        
+        <h2>¿Es EWT un ERC20 token?</h2>
+        <p>El EWT nativo no es un token ERC20. Sin embargo, hemos desarrollado el token EWT Bridged (EWTB), que es un token ERC20 que puede acuñarse a través de un puente, ofreciendo un método para transferir EWT de la Energy Web Chain a la mainnet de Ethereum de forma rápida y económica.</p>
+        
+        </div>
+        
+        <hr>
+        <section lang="es-ES"> <!-- ReqI11 -->
+            <h3>Calculadora de compra de tokens $EWT</h3>
+            <br>
+            
+            <p>Introduzca nº de tokens que compraría: <input id="a" type="number"> 
+                <span id="pNPa" class="Unidades"></span></p> <!-- ReqI6 -->
+            <p>Indique precio máximo que pueda gastar: <input id="b" type="number"> 
+                <span id="pPrecio" class="Precio"></span></p> <!-- ReqI6 -->
+            <p>Indique nº de Brokers que desea usar para la compra de los tokens: <input id="d" type="number"> 
+                <span id="pBroker" class="Broker"></span></p> <!-- ReqI6 -->
+            <p>Indique fecha aproximada de cuando desee recibir los tokens: <input id="f" type="date"> 
+                <span id="pFecha" class="Fecha"></span></p><!-- ReqI7 -->
+            <br>
+            <input name="Calcula" value="Calcula" type="button" 
+                onclick="calcula('a', 'b', 'c'), 
+                    preciobroker('d', 'e'),
+                    fechaestimadalarga('f','g'), 
+                    fechaestimadacorta('f','h')">
+            <br>
+            <p>Precio medio a gastar por token: <span id="c" class="Precio" onclick=" "></span><p> <!-- ReqI8 -->
+            <p>Costes de los brokers: <span id="e" class="Broker"></span></p> <!-- ReqI9 -->
+            <p>Fecha de llegada estimada (fecha larga): <span id="g" class="Fecha" onclick=" "></span></p> <!-- ReqI10 -->
+            <p>Fecha de llegada estimada (fecha corta): <span id="h" class="Fecha" onclick=" "></span> <!-- ReqI10 -->
+            </p>
+        </section>
+        
+        
+    </body>
+</html>

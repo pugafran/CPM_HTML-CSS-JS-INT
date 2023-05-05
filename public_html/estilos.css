@@ -1,0 +1,42 @@
+.IMPORTANTE{color: #7d2181;}/* ReqC1 */ 
+#TITULO{font-size: 18pt; font-weight: bold;}/* ReqC3 */
+{font-style: normal;}/* ReqC6 */
+.IMPORTANTE,h1{text-align: center;}/* ReqC7 */
+p{text-indent: 1em;
+  opacity: 0.6;} / ReqC8 /
+section>{margin: 1em 0.6em 0.4em 10em;
+          padding: 0.5em;}/* ReqC10 */
+a:link{color: blue;}/* ReqC11 */
+a:visited{color: deeppink;}/* ReqC11 */
+a:hover{color: aqua;}/* ReqC11 */
+
+ul:first-of-type{font-weight: bold;
+				 text-shadow: grey;
+				 text-transform: lowercase} /* ReqC12 */
+ul:last-of-type{font-weight: bold;
+				 text-shadow: grey;
+				 text-transform: lowercase} /* ReqC12 */
+ul:first-of-type:first-letter{font-weight: bold;
+				 text-shadow: none;
+				 text-transform: uppercase} /* ReqC12 */
+ul:last-of-type:first-letter{font-weight: bold;
+				 text-shadow: none;
+				 text-transform: uppercase} /* ReqC12 */
+				 
+article:first-letter{border-width:medium thin medium thin;	/* ReqC13 */
+					 border-color: purple orange purple orange;	/* ReqC13 */
+					 border-style: dashed solid dashed solid;}	/* ReqC13 */
+	
+#PrimeraLinea:first-line{font-weight: bolder;}	/* ReqC14 */
+ol {list-style-type: lower-roman} /*ReqC16*/
+ul {list-style-image: url(icono.png);size: 2px} /*ReqC17*/
+table {caption-side: bottom} /*ReqC19*/
+table {border-spacing: 1 2;} /*ReqC20*/
+
+img {
+  border: 5px solid #572364;
+}
+	
+
+
+
